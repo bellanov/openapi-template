@@ -24,16 +24,4 @@ These violations will produce warnings but won't fail the pipeline:
 
 ## Testing
 
-You can test these examples against the ruleset by running:
-
-```bash
-spectral lint invalid/<example-file>.yaml --ruleset .spectral.yml
-```
-
-To see all errors across all invalid examples:
-
-```bash
-spectral lint invalid/**/*.yaml --ruleset .spectral.yml
-```
-
-**Note:** The CI/CD workflow in `.github/workflows/validate.yml` only validates specs in the `specs/` directory, not this `invalid/` directory.
+These examples are provided for reference and documentation purposes. They are not validated by the CI/CD workflow in `.github/workflows/validate.yml`, which only checks the `specs/` directory.

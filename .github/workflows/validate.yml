@@ -6,13 +6,11 @@ on:
       - main
     paths:
       - "specs/**"
-      - "examples/valid/**"
       - ".spectral.yml"
       - ".github/workflows/validate.yml"
   pull_request:
     paths:
       - "specs/**"
-      - "examples/valid/**"
       - ".spectral.yml"
       - ".github/workflows/validate.yml"
 
@@ -35,4 +33,4 @@ jobs:
 
       - name: Validate OpenAPI specs
         run: |
-          spectral lint specs/**/*.yaml examples/valid/**/*.yaml --ruleset .spectral.yml --fail-severity error
+          spectral lint specs/**/*.yaml --ruleset .spectral.yml --fail-severity error

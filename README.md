@@ -19,8 +19,8 @@ This template provides:
 │   └── validate.yml          # GitHub Actions workflow for spec validation
 ├── specs/
 │   └── openapi.yaml          # Example valid OpenAPI 3.0.3 specification
-├── invalid/
-│   ├── README.md             # Documentation for invalid examples
+├── tests/
+│   ├── README.md             # Documentation for the example spec violations
 │   └── *.yaml                # Example specs with intentional rule violations
 ├── .spectral.yml             # Spectral ruleset configuration
 └── README.md                 # This file
@@ -78,7 +78,7 @@ The GitHub Actions workflow (`.github/workflows/validate.yml`) automatically:
 3. Validates all YAML files in the `specs/` directory
 4. Fails the build if any error-level violations are found
 
-The pipeline **only validates files in the `specs/` directory** and ignores the `invalid/` examples.
+The pipeline validates the `specs/` directory and ignores the `tests/` examples.
 
 ## Using This Template
 
@@ -93,9 +93,8 @@ The pipeline **only validates files in the `specs/` directory** and ignores the 
 See `specs/openapi.yaml` for a complete example that passes all validation rules.
 
 ### Invalid Specs (for reference)
-The `invalid/` directory contains examples that intentionally violate various rules. See `invalid/README.md` for details. These are useful for:
+The `tests/` directory contains examples that intentionally violate various rules. See `tests/README.md` for details. These examples are for reference only and are not part of CI validation.
 - Understanding what each rule enforces
-- Testing Spectral ruleset changes
 - Training team members on API quality standards
 
 ## License
