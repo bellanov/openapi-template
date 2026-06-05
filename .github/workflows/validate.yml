@@ -32,4 +32,5 @@ jobs:
         run: npm install -g @stoplight/spectral-cli
 
       - name: Validate OpenAPI specs
-        run: spectral lint specs/**/*.yaml --ruleset .spectral.yml --fail-severity error
+        run: |
+          spectral lint specs/**/*.yaml --ruleset .spectral.yml --fail-severity error
