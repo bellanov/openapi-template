@@ -53,6 +53,21 @@ spectral lint specs/openapi.yaml --ruleset .spectral.yml
 spectral lint specs/**/*.yaml --ruleset .spectral.yml --fail-severity error
 ```
 
+### Client Generation
+
+A series of [Generators](https://openapi-generator.tech/docs/generators) are available that let you generate boilerplate code for various clients from a valid *OpenAPI* spec:
+
+```bash
+# Python
+npx @openapitools/openapi-generator-cli generate -i specs/openapi.yaml -g python -o python/
+
+# Ruby
+npx @openapitools/openapi-generator-cli generate -i specs/openapi.yaml -g ruby -o ruby/
+
+# Ruby
+npx @openapitools/openapi-generator-cli generate -i specs/openapi.yaml -g java -o java/
+```
+
 ## Spectral Ruleset
 
 The `.spectral.yml` file extends the standard `spectral:oas` ruleset and adds custom rules:
