@@ -31,6 +31,7 @@ This template provides:
 ### Prerequisites
 
 - Node.js 20+ (for running Spectral locally)
+- Docker (for visualizing OpenAPI specifications)
 
 ### Local Validation
 
