@@ -1,13 +1,14 @@
 # Run Swagger UI in Docker to visualize the OpenAPI spec.
 # Prefer specs/openapy.yml as requested; fall back to specs/openapi.yaml if needed.
 param(
-    [int]$Port = 8080
+    [int]$Port = 8080,
+    [string]$Spec = "openapi.yml"
 )
 
-$specFile = "specs/openapy.yml"
+$specFile = "specs/$Spec"
 if (-not (Test-Path -Path $specFile)) {
     $specFile = "specs/openapi.yaml"
-    Write-Warning "specs/openapy.yml not found. Falling back to $specFile."
+    Write-Warning "OpenAPI ($Spec) not found. Falling back to $specFile."
 }
 
 if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {

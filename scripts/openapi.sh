@@ -3,10 +3,11 @@ set -euo pipefail
 
 # Run Swagger UI in Docker to visualize the OpenAPI spec.
 # Prefer specs/openapy.yml as requested; fall back to specs/openapi.yaml if needed.
-SPEC_FILE="specs/openapy.yml"
+SPEC="${1:-openapi.yml}"
+SPEC_FILE="specs/${SPEC}"
 if [[ ! -f "$SPEC_FILE" ]]; then
   SPEC_FILE="specs/openapi.yaml"
-  echo "Warning: specs/openapy.yml not found. Falling back to ${SPEC_FILE}."
+  echo "Warning: OpenAPI (${SPEC}) not found. Falling back to ${SPEC_FILE}."
 fi
 
 if ! command -v docker >/dev/null 2>&1; then
