@@ -51,6 +51,14 @@ spectral lint specs/openapi.yaml --ruleset .spectral.yml
 
 # Fail on errors only (same as CI/CD)
 spectral lint specs/**/*.yaml --ruleset .spectral.yml --fail-severity error
+
+# Validate using scripts used in CICD
+scripts/test.sh
+scripts/test.ps1
+
+# Visualize the specification using Docker
+scripts/openapi.sh
+scripts/openapi.ps1
 ```
 
 ### Client Generation
