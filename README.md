@@ -31,6 +31,7 @@ This template provides:
 ### Prerequisites
 
 - Node.js 20+ (for running Spectral locally)
+- Docker (for visualizing OpenAPI specifications)
 
 ### Local Validation
 
@@ -51,6 +52,29 @@ spectral lint specs/openapi.yaml --ruleset .spectral.yml
 
 # Fail on errors only (same as CI/CD)
 spectral lint specs/**/*.yaml --ruleset .spectral.yml --fail-severity error
+
+# Validate using scripts used in CICD
+scripts/test.sh
+scripts/test.ps1
+
+# Visualize the specification using Docker
+scripts/openapi.sh
+scripts/openapi.ps1
+```
+
+### Client Generation
+
+A series of [Generators](https://openapi-generator.tech/docs/generators) are available that let you generate boilerplate code for various clients from a valid *OpenAPI* spec:
+
+```bash
+# Python
+npx @openapitools/openapi-generator-cli generate -i specs/openapi.yaml -g python -o python/
+
+# Ruby
+npx @openapitools/openapi-generator-cli generate -i specs/openapi.yaml -g ruby -o ruby/
+
+# Ruby
+npx @openapitools/openapi-generator-cli generate -i specs/openapi.yaml -g java -o java/
 ```
 
 ## Spectral Ruleset
