@@ -26,6 +26,7 @@ paths:
     get:
       summary: List all customers
       description: Retrieve a paginated list of all customers in the system
+      operationId: listCustomers
       responses:
         '200':
           description: List of Customers
@@ -40,6 +41,7 @@ paths:
     get:
       summary: List all beers
       description: Retrieve a paginated list of all available beers
+      operationId: listBeers
       responses:
         '200':
           description: List of Beers
