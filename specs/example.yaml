@@ -125,6 +125,7 @@ components:
           example: '123e4567-e89b-12d3-a456-426614174000'
         name:
           type: string
+          description: The name of the beer.
           example: Lager
           minLength: 2
           maxLength: 100
@@ -133,17 +134,20 @@ components:
           properties:
             name:
               type: string
+              description: The name of the brewery.
               example: Aviator Brewery
               minLength: 2
               maxLength: 100
             location:
               type: string
+              description: The location of the brewery.
               example: Fuquay Varina, USA
               minLength: 2
               maxLength: 100
         style:
           type: string
-          example: Pilsner
+          description: The style of the beer.
+          example: PALE_ALE
           enum: [ALE, PALE_ALE, IPA, WHEAT, LAGER]
           minLength: 2
           maxLength: 100
