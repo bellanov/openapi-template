@@ -24,6 +24,8 @@ servers:
 paths:
   /v1/customers:
     get:
+      summary: List all customers
+      description: Retrieve a paginated list of all customers in the system
       responses:
         '200':
           description: List of Customers
@@ -36,6 +38,8 @@ paths:
 
   /v1/beers:
     get:
+      summary: List all beers
+      description: Retrieve a paginated list of all available beers
       responses:
         '200':
           description: List of Beers
@@ -50,6 +54,7 @@ components:
   schemas:
     Address:
       type: object
+      description: Physical address information
       properties:
         street:
           type: string
@@ -76,7 +81,7 @@ components:
     
     Customer:
       type: object
-      description: Customer object
+      description: Represents a customer with contact and address information
       properties:
         id:
           type: string
@@ -117,7 +122,7 @@ components:
 
     Beer:
       type: object
-      description: Beer object
+      description: Represents a beer product with brewery and style information
       properties:
         id:
           type: string
@@ -174,7 +179,7 @@ components:
 
     PagedResponse:
       type: object
-      description: Paged response object
+      description: Standard pagination metadata for list endpoints
       properties:
         page:
           type: integer
