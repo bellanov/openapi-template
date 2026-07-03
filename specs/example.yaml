@@ -1,7 +1,7 @@
 openapi: '3.0.3'
 
 info:
-  title: OpenAPI Tutorial
+  title: Example OpenAPI Specification
   version: '1.0'
   description: A simple OpenAPI specification for testing purposes.
   termsOfService: https://example.com/terms/
