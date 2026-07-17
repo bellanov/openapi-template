@@ -12,14 +12,16 @@ info:
     name: Bellanov Apilli
     url: https://github.com/bellanov
     email: bellanov@example.com
-  
+
 servers:
-  - url: https://dev.example.com
-    description: Development Server
-  - url: https://staging.example.com
-    description: Staging Server
-  - url: https://prod.example.com
-    description: Production Server
+  - url: https://{environment}.example.com/
+    variables:
+      environment:
+        default: api    # Production server
+        enum:
+          - api         # Production server
+          - api.dev     # Development server
+          - api.staging # Staging server
 
 paths:
   /v1/customers:
