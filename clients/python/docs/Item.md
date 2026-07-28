@@ -1,14 +1,13 @@
 # Item
 
-
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **str** | The unique identifier of the item. | 
-**name** | **str** | The name of the item. | 
-**description** | **str** | An optional description of the item. | [optional] 
-**created_at** | **datetime** | The timestamp when the item was created. | [optional] 
+| Name            | Type         | Description                              | Notes      |
+| --------------- | ------------ | ---------------------------------------- | ---------- |
+| **id**          | **str**      | The unique identifier of the item.       |
+| **name**        | **str**      | The name of the item.                    |
+| **description** | **str**      | An optional description of the item.     | [optional] |
+| **created_at**  | **datetime** | The timestamp when the item was created. | [optional] |
 
 ## Example
 
@@ -27,6 +26,5 @@ item_dict = item_instance.to_dict()
 # create an instance of Item from a dict
 item_from_dict = Item.from_dict(item_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

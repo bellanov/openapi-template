@@ -2,12 +2,12 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | **string** | The unique identifier of the item. | 
-**Name** | **string** | The name of the item. | 
-**Description** | Pointer to **string** | An optional description of the item. | [optional] 
-**CreatedAt** | Pointer to **time.Time** | The timestamp when the item was created. | [optional] 
+| Name            | Type                     | Description                              | Notes      |
+| --------------- | ------------------------ | ---------------------------------------- | ---------- |
+| **Id**          | **string**               | The unique identifier of the item.       |
+| **Name**        | **string**               | The name of the item.                    |
+| **Description** | Pointer to **string**    | An optional description of the item.     | [optional] |
+| **CreatedAt**   | Pointer to **time.Time** | The timestamp when the item was created. | [optional] |
 
 ## Methods
 
@@ -47,7 +47,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-
 ### GetName
 
 `func (o *Item) GetName() string`
@@ -66,7 +65,6 @@ and a boolean to check if the value has been set.
 `func (o *Item) SetName(v string)`
 
 SetName sets Name field to given value.
-
 
 ### GetDescription
 
@@ -118,7 +116,4 @@ SetCreatedAt sets CreatedAt field to given value.
 
 HasCreatedAt returns a boolean if a field has been set.
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -58,7 +58,7 @@ Please follow the [installation](#installation) procedure and then run the follo
 require 'openapi_client'
 
 api_instance = OpenapiClient::ItemsApi.new
-item_input = OpenapiClient::ItemInput.new({name: 'New Item'}) # ItemInput | 
+item_input = OpenapiClient::ItemInput.new({name: 'New Item'}) # ItemInput |
 
 begin
   #Create an item
@@ -74,23 +74,20 @@ end
 
 All URIs are relative to *https://api.example.com/v1*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*OpenapiClient::ItemsApi* | [**create_item**](docs/ItemsApi.md#create_item) | **POST** /items | Create an item
-*OpenapiClient::ItemsApi* | [**delete_item**](docs/ItemsApi.md#delete_item) | **DELETE** /items/{itemId} | Delete an item
-*OpenapiClient::ItemsApi* | [**get_item**](docs/ItemsApi.md#get_item) | **GET** /items/{itemId} | Get an item
-*OpenapiClient::ItemsApi* | [**list_items**](docs/ItemsApi.md#list_items) | **GET** /items | List all items
-
+| Class                     | Method                                          | HTTP request               | Description    |
+| ------------------------- | ----------------------------------------------- | -------------------------- | -------------- |
+| _OpenapiClient::ItemsApi_ | [**create_item**](docs/ItemsApi.md#create_item) | **POST** /items            | Create an item |
+| _OpenapiClient::ItemsApi_ | [**delete_item**](docs/ItemsApi.md#delete_item) | **DELETE** /items/{itemId} | Delete an item |
+| _OpenapiClient::ItemsApi_ | [**get_item**](docs/ItemsApi.md#get_item)       | **GET** /items/{itemId}    | Get an item    |
+| _OpenapiClient::ItemsApi_ | [**list_items**](docs/ItemsApi.md#list_items)   | **GET** /items             | List all items |
 
 ## Documentation for Models
 
- - [OpenapiClient::Error](docs/Error.md)
- - [OpenapiClient::Item](docs/Item.md)
- - [OpenapiClient::ItemInput](docs/ItemInput.md)
- - [OpenapiClient::ItemList](docs/ItemList.md)
-
+- [OpenapiClient::Error](docs/Error.md)
+- [OpenapiClient::Item](docs/Item.md)
+- [OpenapiClient::ItemInput](docs/ItemInput.md)
+- [OpenapiClient::ItemList](docs/ItemList.md)
 
 ## Documentation for Authorization
 
 Endpoints do not require authorization.
-

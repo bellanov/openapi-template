@@ -2,16 +2,17 @@
 
 All URIs are relative to *https://api.example.com/v1*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**createItem**](ItemsApi.md#createItem) | **POST** /items | Create an item |
+| Method                                   | HTTP request               | Description    |
+| ---------------------------------------- | -------------------------- | -------------- |
+| [**createItem**](ItemsApi.md#createItem) | **POST** /items            | Create an item |
 | [**deleteItem**](ItemsApi.md#deleteItem) | **DELETE** /items/{itemId} | Delete an item |
-| [**getItem**](ItemsApi.md#getItem) | **GET** /items/{itemId} | Get an item |
-| [**listItems**](ItemsApi.md#listItems) | **GET** /items | List all items |
-
+| [**getItem**](ItemsApi.md#getItem)       | **GET** /items/{itemId}    | Get an item    |
+| [**listItems**](ItemsApi.md#listItems)   | **GET** /items             | List all items |
 
 <a id="createItem"></a>
+
 # **createItem**
+
 > Item createItem(itemInput)
 
 Create an item
@@ -19,6 +20,7 @@ Create an item
 Creates a new item.
 
 ### Example
+
 ```java
 // Import classes:
 import org.openapitools.client.ApiClient;
@@ -33,7 +35,7 @@ public class Example {
     defaultClient.setBasePath("https://api.example.com/v1");
 
     ItemsApi apiInstance = new ItemsApi(defaultClient);
-    ItemInput itemInput = new ItemInput(); // ItemInput | 
+    ItemInput itemInput = new ItemInput(); // ItemInput |
     try {
       Item result = apiInstance.createItem(itemInput);
       System.out.println(result);
@@ -50,9 +52,9 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **itemInput** | [**ItemInput**](ItemInput.md)|  | |
+| Name          | Type                          | Description | Notes |
+| ------------- | ----------------------------- | ----------- | ----- |
+| **itemInput** | [**ItemInput**](ItemInput.md) |             |       |
 
 ### Return type
 
@@ -64,18 +66,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **201** | Item created successfully. |  -  |
-| **400** | Bad request. |  -  |
-| **500** | Internal server error. |  -  |
+
+| Status code | Description                | Response headers |
+| ----------- | -------------------------- | ---------------- |
+| **201**     | Item created successfully. | -                |
+| **400**     | Bad request.               | -                |
+| **500**     | Internal server error.     | -                |
 
 <a id="deleteItem"></a>
+
 # **deleteItem**
+
 > deleteItem(itemId)
 
 Delete an item
@@ -83,6 +88,7 @@ Delete an item
 Deletes a single item by its ID.
 
 ### Example
+
 ```java
 // Import classes:
 import org.openapitools.client.ApiClient;
@@ -113,9 +119,9 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **itemId** | **String**| The unique identifier of the item. | |
+| Name       | Type       | Description                        | Notes |
+| ---------- | ---------- | ---------------------------------- | ----- |
+| **itemId** | **String** | The unique identifier of the item. |       |
 
 ### Return type
 
@@ -127,18 +133,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **204** | Item deleted successfully. |  -  |
-| **404** | Item not found. |  -  |
-| **500** | Internal server error. |  -  |
+
+| Status code | Description                | Response headers |
+| ----------- | -------------------------- | ---------------- |
+| **204**     | Item deleted successfully. | -                |
+| **404**     | Item not found.            | -                |
+| **500**     | Internal server error.     | -                |
 
 <a id="getItem"></a>
+
 # **getItem**
+
 > Item getItem(itemId)
 
 Get an item
@@ -146,6 +155,7 @@ Get an item
 Returns a single item by its ID.
 
 ### Example
+
 ```java
 // Import classes:
 import org.openapitools.client.ApiClient;
@@ -177,9 +187,9 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **itemId** | **String**| The unique identifier of the item. | |
+| Name       | Type       | Description                        | Notes |
+| ---------- | ---------- | ---------------------------------- | ----- |
+| **itemId** | **String** | The unique identifier of the item. |       |
 
 ### Return type
 
@@ -191,18 +201,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | The requested item. |  -  |
-| **404** | Item not found. |  -  |
-| **500** | Internal server error. |  -  |
+
+| Status code | Description            | Response headers |
+| ----------- | ---------------------- | ---------------- |
+| **200**     | The requested item.    | -                |
+| **404**     | Item not found.        | -                |
+| **500**     | Internal server error. | -                |
 
 <a id="listItems"></a>
+
 # **listItems**
+
 > ItemList listItems(limit)
 
 List all items
@@ -210,6 +223,7 @@ List all items
 Returns a paginated list of all items.
 
 ### Example
+
 ```java
 // Import classes:
 import org.openapitools.client.ApiClient;
@@ -241,9 +255,9 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **limit** | **Integer**| Maximum number of items to return. | [optional] [default to 20] |
+| Name      | Type        | Description                        | Notes                      |
+| --------- | ----------- | ---------------------------------- | -------------------------- |
+| **limit** | **Integer** | Maximum number of items to return. | [optional] [default to 20] |
 
 ### Return type
 
@@ -255,13 +269,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | A list of items. |  -  |
-| **400** | Bad request. |  -  |
-| **500** | Internal server error. |  -  |
 
+| Status code | Description            | Response headers |
+| ----------- | ---------------------- | ---------------- |
+| **200**     | A list of items.       | -                |
+| **400**     | Bad request.           | -                |
+| **500**     | Internal server error. | -                |

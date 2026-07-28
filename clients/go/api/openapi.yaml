@@ -10,28 +10,28 @@ info:
   title: OpenAPI Template
   version: 1.0.0
 servers:
-- description: Production server
-  url: https://api.example.com/v1
+  - description: Production server
+    url: https://api.example.com/v1
 tags:
-- description: Item operations
-  name: items
+  - description: Item operations
+    name: items
 paths:
   /items:
     get:
       description: Returns a paginated list of all items.
       operationId: listItems
       parameters:
-      - description: Maximum number of items to return.
-        explode: true
-        in: query
-        name: limit
-        required: false
-        schema:
-          default: 20
-          maximum: 100
-          minimum: 1
-          type: integer
-        style: form
+        - description: Maximum number of items to return.
+          explode: true
+          in: query
+          name: limit
+          required: false
+          schema:
+            default: 20
+            maximum: 100
+            minimum: 1
+            type: integer
+          style: form
       responses:
         "200":
           content:
@@ -53,7 +53,7 @@ paths:
           description: Internal server error.
       summary: List all items
       tags:
-      - items
+        - items
     post:
       description: Creates a new item.
       operationId: createItem
@@ -84,20 +84,20 @@ paths:
           description: Internal server error.
       summary: Create an item
       tags:
-      - items
+        - items
   /items/{itemId}:
     delete:
       description: Deletes a single item by its ID.
       operationId: deleteItem
       parameters:
-      - description: The unique identifier of the item.
-        explode: false
-        in: path
-        name: itemId
-        required: true
-        schema:
-          type: string
-        style: simple
+        - description: The unique identifier of the item.
+          explode: false
+          in: path
+          name: itemId
+          required: true
+          schema:
+            type: string
+          style: simple
       responses:
         "204":
           description: Item deleted successfully.
@@ -115,19 +115,19 @@ paths:
           description: Internal server error.
       summary: Delete an item
       tags:
-      - items
+        - items
     get:
       description: Returns a single item by its ID.
       operationId: getItem
       parameters:
-      - description: The unique identifier of the item.
-        explode: false
-        in: path
-        name: itemId
-        required: true
-        schema:
-          type: string
-        style: simple
+        - description: The unique identifier of the item.
+          explode: false
+          in: path
+          name: itemId
+          required: true
+          schema:
+            type: string
+          style: simple
       responses:
         "200":
           content:
@@ -149,7 +149,7 @@ paths:
           description: Internal server error.
       summary: Get an item
       tags:
-      - items
+        - items
 components:
   schemas:
     Item:
@@ -177,8 +177,8 @@ components:
           format: date-time
           type: string
       required:
-      - id
-      - name
+        - id
+        - name
       type: object
     ItemInput:
       example:
@@ -194,20 +194,20 @@ components:
           example: This is a new item.
           type: string
       required:
-      - name
+        - name
       type: object
     ItemList:
       example:
         total: 42
         items:
-        - createdAt: 2024-01-01T00:00:00Z
-          name: Sample Item
-          description: This is a sample item.
-          id: abc123
-        - createdAt: 2024-01-01T00:00:00Z
-          name: Sample Item
-          description: This is a sample item.
-          id: abc123
+          - createdAt: 2024-01-01T00:00:00Z
+            name: Sample Item
+            description: This is a sample item.
+            id: abc123
+          - createdAt: 2024-01-01T00:00:00Z
+            name: Sample Item
+            description: This is a sample item.
+            id: abc123
       properties:
         items:
           description: The list of items.
@@ -219,7 +219,7 @@ components:
           example: 42
           type: integer
       required:
-      - items
+        - items
       type: object
     Error:
       example:
@@ -235,6 +235,6 @@ components:
           example: Bad request.
           type: string
       required:
-      - code
-      - message
+        - code
+        - message
       type: object

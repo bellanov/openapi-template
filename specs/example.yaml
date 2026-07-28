@@ -1,8 +1,8 @@
-openapi: '3.0.3'
+openapi: "3.0.3"
 
 info:
   title: Example OpenAPI Specification
-  version: '1.0'
+  version: "1.0"
   description: A simple OpenAPI specification for testing purposes.
   termsOfService: https://example.com/terms/
   license:
@@ -14,44 +14,54 @@ info:
     email: bellanov@example.com
 
 servers:
-  - url: https://{environment}.example.com/
+  - url: https://{environment}.example.com/v1
     variables:
       environment:
-        default: api    # Production server
+        default: api # Production server
         enum:
-          - api         # Production server
-          - api.dev     # Development server
+          - api # Production server
+          - api.dev # Development server
           - api.staging # Staging server
+
+tags:
+  - name: customers
+    description: Customer operations
+  - name: beers
+    description: Beer operations
 
 paths:
   /v1/customers:
     get:
+      tags:
+        - customers
       summary: List all customers
       description: Retrieve a paginated list of all customers in the system
       operationId: listCustomers
       responses:
-        '200':
+        "200":
           description: List of Customers
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/CustomerPagedList"
-        '404':
+        "404":
           description: Customers not found
 
   /v1/beers:
     get:
+      tags:
+        - beers
       summary: List all beers
       description: Retrieve a paginated list of all available beers
       operationId: listBeers
       responses:
-        '200':
+        "200":
           description: List of Beers
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/BeerPagedList"
-        '404':
+        "404":
           description: Beers not found
 
 components:
@@ -61,14 +71,16 @@ components:
       description: Physical address information
       properties:
         street:
+          description: Street address
           type: string
           example: 123 Main St
         city:
+          description: City name
           type: string
           example: Anytown
         state:
-          type: string
           description: US state code
+          type: string
           # enum: [CA, NY, TX, FL, IL]
           enum:
             - CA
@@ -80,41 +92,46 @@ components:
           maxLength: 2
           example: CA
         zipCode:
+          description: Postal code
           type: string
-          example: '12345'
-    
+          example: "12345"
+
     Customer:
       type: object
       description: Represents a customer with contact and address information
       properties:
         id:
+          description: Unique identifier for the customer
           type: string
           format: uuid
-          example: '123e4567-e89b-12d3-a456-426614174000'
+          example: "123e4567-e89b-12d3-a456-426614174000"
         firstName:
+          description: First name of the customer
           type: string
           example: John
           minLength: 2
           maxLength: 100
         lastName:
+          description: Last name of the customer
           type: string
           example: Doe
           minLength: 2
           maxLength: 100
         address:
           $ref: "#/components/schemas/Address"
-    
+
     CustomerList:
       type: object
       description: Customer list object
       properties:
         customers:
+          description: List of customers
           type: array
           minItems: 1
           maxItems: 100
           items:
             $ref: "#/components/schemas/Customer"
-    
+
     CustomerPagedList:
       type: object
       description: Customer paged response object
@@ -129,16 +146,18 @@ components:
       description: Represents a beer product with brewery and style information
       properties:
         id:
+          description: Unique identifier for the beer
           type: string
           format: uuid
-          example: '123e4567-e89b-12d3-a456-426614174000'
+          example: "123e4567-e89b-12d3-a456-426614174000"
         name:
-          type: string
           description: The name of the beer.
+          type: string
           example: Lager
           minLength: 2
           maxLength: 100
         brewery:
+          description: The brewery that produces the beer.
           type: object
           properties:
             name:
@@ -160,12 +179,13 @@ components:
           enum: [ALE, PALE_ALE, IPA, WHEAT, LAGER]
           minLength: 2
           maxLength: 100
-    
+
     BeerList:
       type: object
       description: Beer list object
       properties:
         beers:
+          description: List of beers
           type: array
           minItems: 1
           maxItems: 100
@@ -186,19 +206,23 @@ components:
       description: Standard pagination metadata for list endpoints
       properties:
         page:
+          description: Current page number (1-based index)
           type: integer
           example: 1
           minimum: 1
         pageSize:
+          description: Number of items per page
           type: integer
           example: 10
           minimum: 1
           maximum: 100
         totalPages:
+          description: Total number of pages available
           type: integer
           example: 5
           minimum: 1
         totalItems:
+          description: Total number of items available across all pages
           type: integer
           example: 50
           minimum: 0

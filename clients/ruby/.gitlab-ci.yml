@@ -7,12 +7,12 @@
     - bundle install -j $(nproc)
   parallel:
     matrix:
-      - RUBY_VERSION: ['2.7', '3.0', '3.1']
+      - RUBY_VERSION: ["2.7", "3.0", "3.1"]
   image: "ruby:$RUBY_VERSION"
   cache:
     paths:
       - vendor/ruby
-    key: 'ruby-$RUBY_VERSION'
+    key: "ruby-$RUBY_VERSION"
 
 gem:
   extends: .ruby
@@ -23,4 +23,3 @@ gem:
   artifacts:
     paths:
       - pkg/*.gem
-

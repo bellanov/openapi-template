@@ -10,41 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { Item } from '../models/Item';
-import { HttpFile } from '../http/http';
+import { Item } from "../models/Item";
+import { HttpFile } from "../http/http";
 
 export class ItemList {
-    /**
-    * The list of items.
-    */
-    'items': Array<Item>;
-    /**
-    * The total number of items available.
-    */
-    'total'?: number;
+  /**
+   * The list of items.
+   */
+  "items": Array<Item>;
+  /**
+   * The total number of items available.
+   */
+  "total"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly mapping: {[index: string]: string} | undefined = undefined;
+  static readonly mapping: { [index: string]: string } | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "items",
-            "baseName": "items",
-            "type": "Array<Item>",
-            "format": ""
-        },
-        {
-            "name": "total",
-            "baseName": "total",
-            "type": "number",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "items",
+      baseName: "items",
+      type: "Array<Item>",
+      format: "",
+    },
+    {
+      name: "total",
+      baseName: "total",
+      type: "number",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ItemList.attributeTypeMap;
-    }
+  static getAttributeTypeMap() {
+    return ItemList.attributeTypeMap;
+  }
 
-    public constructor() {
-    }
+  public constructor() {}
 }

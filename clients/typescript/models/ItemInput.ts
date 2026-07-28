@@ -10,40 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 export class ItemInput {
-    /**
-    * The name of the item.
-    */
-    'name': string;
-    /**
-    * An optional description of the item.
-    */
-    'description'?: string;
+  /**
+   * The name of the item.
+   */
+  "name": string;
+  /**
+   * An optional description of the item.
+   */
+  "description"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly mapping: {[index: string]: string} | undefined = undefined;
+  static readonly mapping: { [index: string]: string } | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "description",
+      baseName: "description",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ItemInput.attributeTypeMap;
-    }
+  static getAttributeTypeMap() {
+    return ItemInput.attributeTypeMap;
+  }
 
-    public constructor() {
-    }
+  public constructor() {}
 }

@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Code** | **int32** | The error code. | 
-**Message** | **string** | A human-readable error message. | 
+| Name        | Type       | Description                     | Notes |
+| ----------- | ---------- | ------------------------------- | ----- |
+| **Code**    | **int32**  | The error code.                 |
+| **Message** | **string** | A human-readable error message. |
 
 ## Methods
 
@@ -45,7 +45,6 @@ and a boolean to check if the value has been set.
 
 SetCode sets Code field to given value.
 
-
 ### GetMessage
 
 `func (o *Error) GetMessage() string`
@@ -65,8 +64,4 @@ and a boolean to check if the value has been set.
 
 SetMessage sets Message field to given value.
 
-
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

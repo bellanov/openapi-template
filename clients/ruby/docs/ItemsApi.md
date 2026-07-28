@@ -2,13 +2,12 @@
 
 All URIs are relative to *https://api.example.com/v1*
 
-| Method | HTTP request | Description |
-| ------ | ------------ | ----------- |
-| [**create_item**](ItemsApi.md#create_item) | **POST** /items | Create an item |
+| Method                                     | HTTP request               | Description    |
+| ------------------------------------------ | -------------------------- | -------------- |
+| [**create_item**](ItemsApi.md#create_item) | **POST** /items            | Create an item |
 | [**delete_item**](ItemsApi.md#delete_item) | **DELETE** /items/{itemId} | Delete an item |
-| [**get_item**](ItemsApi.md#get_item) | **GET** /items/{itemId} | Get an item |
-| [**list_items**](ItemsApi.md#list_items) | **GET** /items | List all items |
-
+| [**get_item**](ItemsApi.md#get_item)       | **GET** /items/{itemId}    | Get an item    |
+| [**list_items**](ItemsApi.md#list_items)   | **GET** /items             | List all items |
 
 ## create_item
 
@@ -25,7 +24,7 @@ require 'time'
 require 'openapi_client'
 
 api_instance = OpenapiClient::ItemsApi.new
-item_input = OpenapiClient::ItemInput.new({name: 'New Item'}) # ItemInput | 
+item_input = OpenapiClient::ItemInput.new({name: 'New Item'}) # ItemInput |
 
 begin
   # Create an item
@@ -56,9 +55,9 @@ end
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **item_input** | [**ItemInput**](ItemInput.md) |  |  |
+| Name           | Type                          | Description | Notes |
+| -------------- | ----------------------------- | ----------- | ----- |
+| **item_input** | [**ItemInput**](ItemInput.md) |             |       |
 
 ### Return type
 
@@ -72,7 +71,6 @@ No authorization required
 
 - **Content-Type**: application/json
 - **Accept**: application/json
-
 
 ## delete_item
 
@@ -119,9 +117,9 @@ end
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **item_id** | **String** | The unique identifier of the item. |  |
+| Name        | Type       | Description                        | Notes |
+| ----------- | ---------- | ---------------------------------- | ----- |
+| **item_id** | **String** | The unique identifier of the item. |       |
 
 ### Return type
 
@@ -135,7 +133,6 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-
 
 ## get_item
 
@@ -183,9 +180,9 @@ end
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **item_id** | **String** | The unique identifier of the item. |  |
+| Name        | Type       | Description                        | Notes |
+| ----------- | ---------- | ---------------------------------- | ----- |
+| **item_id** | **String** | The unique identifier of the item. |       |
 
 ### Return type
 
@@ -199,7 +196,6 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-
 
 ## list_items
 
@@ -249,8 +245,8 @@ end
 
 ### Parameters
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
+| Name      | Type        | Description                        | Notes                     |
+| --------- | ----------- | ---------------------------------- | ------------------------- |
 | **limit** | **Integer** | Maximum number of items to return. | [optional][default to 20] |
 
 ### Return type
@@ -265,4 +261,3 @@ No authorization required
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-

@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://api.example.com/v1*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**create_item**](ItemsApi.md#create_item) | **POST** /items | Create an item
-[**delete_item**](ItemsApi.md#delete_item) | **DELETE** /items/{itemId} | Delete an item
-[**get_item**](ItemsApi.md#get_item) | **GET** /items/{itemId} | Get an item
-[**list_items**](ItemsApi.md#list_items) | **GET** /items | List all items
-
+| Method                                     | HTTP request               | Description    |
+| ------------------------------------------ | -------------------------- | -------------- |
+| [**create_item**](ItemsApi.md#create_item) | **POST** /items            | Create an item |
+| [**delete_item**](ItemsApi.md#delete_item) | **DELETE** /items/{itemId} | Delete an item |
+| [**get_item**](ItemsApi.md#get_item)       | **GET** /items/{itemId}    | Get an item    |
+| [**list_items**](ItemsApi.md#list_items)   | **GET** /items             | List all items |
 
 # **create_item**
+
 > Item create_item(item_input)
 
 Create an item
@@ -18,7 +18,6 @@ Create an item
 Creates a new item.
 
 ### Example
-
 
 ```python
 import openapi_client
@@ -38,7 +37,7 @@ configuration = openapi_client.Configuration(
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = openapi_client.ItemsApi(api_client)
-    item_input = openapi_client.ItemInput() # ItemInput | 
+    item_input = openapi_client.ItemInput() # ItemInput |
 
     try:
         # Create an item
@@ -49,14 +48,11 @@ with openapi_client.ApiClient(configuration) as api_client:
         print("Exception when calling ItemsApi->create_item: %s\n" % e)
 ```
 
-
-
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **item_input** | [**ItemInput**](ItemInput.md)|  | 
+| Name           | Type                          | Description | Notes |
+| -------------- | ----------------------------- | ----------- | ----- |
+| **item_input** | [**ItemInput**](ItemInput.md) |             |
 
 ### Return type
 
@@ -68,20 +64,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### HTTP response details
 
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** | Item created successfully. |  -  |
-**400** | Bad request. |  -  |
-**500** | Internal server error. |  -  |
+| Status code | Description                | Response headers |
+| ----------- | -------------------------- | ---------------- |
+| **201**     | Item created successfully. | -                |
+| **400**     | Bad request.               | -                |
+| **500**     | Internal server error.     | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_item**
+
 > delete_item(item_id)
 
 Delete an item
@@ -89,7 +86,6 @@ Delete an item
 Deletes a single item by its ID.
 
 ### Example
-
 
 ```python
 import openapi_client
@@ -116,14 +112,11 @@ with openapi_client.ApiClient(configuration) as api_client:
         print("Exception when calling ItemsApi->delete_item: %s\n" % e)
 ```
 
-
-
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **item_id** | **str**| The unique identifier of the item. | 
+| Name        | Type    | Description                        | Notes |
+| ----------- | ------- | ---------------------------------- | ----- |
+| **item_id** | **str** | The unique identifier of the item. |
 
 ### Return type
 
@@ -135,20 +128,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
 
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**204** | Item deleted successfully. |  -  |
-**404** | Item not found. |  -  |
-**500** | Internal server error. |  -  |
+| Status code | Description                | Response headers |
+| ----------- | -------------------------- | ---------------- |
+| **204**     | Item deleted successfully. | -                |
+| **404**     | Item not found.            | -                |
+| **500**     | Internal server error.     | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_item**
+
 > Item get_item(item_id)
 
 Get an item
@@ -156,7 +150,6 @@ Get an item
 Returns a single item by its ID.
 
 ### Example
-
 
 ```python
 import openapi_client
@@ -186,14 +179,11 @@ with openapi_client.ApiClient(configuration) as api_client:
         print("Exception when calling ItemsApi->get_item: %s\n" % e)
 ```
 
-
-
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **item_id** | **str**| The unique identifier of the item. | 
+| Name        | Type    | Description                        | Notes |
+| ----------- | ------- | ---------------------------------- | ----- |
+| **item_id** | **str** | The unique identifier of the item. |
 
 ### Return type
 
@@ -205,20 +195,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
 
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | The requested item. |  -  |
-**404** | Item not found. |  -  |
-**500** | Internal server error. |  -  |
+| Status code | Description            | Response headers |
+| ----------- | ---------------------- | ---------------- |
+| **200**     | The requested item.    | -                |
+| **404**     | Item not found.        | -                |
+| **500**     | Internal server error. | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_items**
+
 > ItemList list_items(limit=limit)
 
 List all items
@@ -226,7 +217,6 @@ List all items
 Returns a paginated list of all items.
 
 ### Example
-
 
 ```python
 import openapi_client
@@ -256,14 +246,11 @@ with openapi_client.ApiClient(configuration) as api_client:
         print("Exception when calling ItemsApi->list_items: %s\n" % e)
 ```
 
-
-
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **limit** | **int**| Maximum number of items to return. | [optional] [default to 20]
+| Name      | Type    | Description                        | Notes                      |
+| --------- | ------- | ---------------------------------- | -------------------------- |
+| **limit** | **int** | Maximum number of items to return. | [optional] [default to 20] |
 
 ### Return type
 
@@ -275,16 +262,15 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
 
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A list of items. |  -  |
-**400** | Bad request. |  -  |
-**500** | Internal server error. |  -  |
+| Status code | Description            | Response headers |
+| ----------- | ---------------------- | ---------------- |
+| **200**     | A list of items.       | -                |
+| **400**     | Bad request.           | -                |
+| **500**     | Internal server error. | -                |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

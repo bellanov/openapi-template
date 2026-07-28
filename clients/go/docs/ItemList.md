@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Items** | [**[]Item**](Item.md) | The list of items. | 
-**Total** | Pointer to **int32** | The total number of items available. | [optional] 
+| Name      | Type                  | Description                          | Notes      |
+| --------- | --------------------- | ------------------------------------ | ---------- |
+| **Items** | [**[]Item**](Item.md) | The list of items.                   |
+| **Total** | Pointer to **int32**  | The total number of items available. | [optional] |
 
 ## Methods
 
@@ -45,7 +45,6 @@ and a boolean to check if the value has been set.
 
 SetItems sets Items field to given value.
 
-
 ### GetTotal
 
 `func (o *ItemList) GetTotal() int32`
@@ -71,7 +70,4 @@ SetTotal sets Total field to given value.
 
 HasTotal returns a boolean if a field has been set.
 
-
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

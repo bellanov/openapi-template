@@ -10,40 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 export class ModelError {
-    /**
-    * The error code.
-    */
-    'code': number;
-    /**
-    * A human-readable error message.
-    */
-    'message': string;
+  /**
+   * The error code.
+   */
+  "code": number;
+  /**
+   * A human-readable error message.
+   */
+  "message": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly mapping: {[index: string]: string} | undefined = undefined;
+  static readonly mapping: { [index: string]: string } | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "number",
-            "format": ""
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "code",
+      baseName: "code",
+      type: "number",
+      format: "",
+    },
+    {
+      name: "message",
+      baseName: "message",
+      type: "string",
+      format: "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return ModelError.attributeTypeMap;
-    }
+  static getAttributeTypeMap() {
+    return ModelError.attributeTypeMap;
+  }
 
-    public constructor() {
-    }
+  public constructor() {}
 }

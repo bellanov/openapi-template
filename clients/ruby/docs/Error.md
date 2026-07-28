@@ -2,10 +2,10 @@
 
 ## Properties
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **code** | **Integer** | The error code. |  |
-| **message** | **String** | A human-readable error message. |  |
+| Name        | Type        | Description                     | Notes |
+| ----------- | ----------- | ------------------------------- | ----- |
+| **code**    | **Integer** | The error code.                 |       |
+| **message** | **String**  | A human-readable error message. |       |
 
 ## Example
 
@@ -17,4 +17,3 @@ instance = OpenapiClient::Error.new(
   message: Bad request.
 )
 ```
-

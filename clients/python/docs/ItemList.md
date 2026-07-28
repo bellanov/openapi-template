@@ -1,12 +1,11 @@
 # ItemList
 
-
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**items** | [**List[Item]**](Item.md) | The list of items. | 
-**total** | **int** | The total number of items available. | [optional] 
+| Name      | Type                      | Description                          | Notes      |
+| --------- | ------------------------- | ------------------------------------ | ---------- |
+| **items** | [**List[Item]**](Item.md) | The list of items.                   |
+| **total** | **int**                   | The total number of items available. | [optional] |
 
 ## Example
 
@@ -25,6 +24,5 @@ item_list_dict = item_list_instance.to_dict()
 # create an instance of ItemList from a dict
 item_list_from_dict = ItemList.from_dict(item_list_dict)
 ```
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

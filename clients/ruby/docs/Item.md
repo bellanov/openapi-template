@@ -2,12 +2,12 @@
 
 ## Properties
 
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **id** | **String** | The unique identifier of the item. |  |
-| **name** | **String** | The name of the item. |  |
-| **description** | **String** | An optional description of the item. | [optional] |
-| **created_at** | **Time** | The timestamp when the item was created. | [optional] |
+| Name            | Type       | Description                              | Notes      |
+| --------------- | ---------- | ---------------------------------------- | ---------- |
+| **id**          | **String** | The unique identifier of the item.       |            |
+| **name**        | **String** | The name of the item.                    |            |
+| **description** | **String** | An optional description of the item.     | [optional] |
+| **created_at**  | **Time**   | The timestamp when the item was created. | [optional] |
 
 ## Example
 
@@ -21,4 +21,3 @@ instance = OpenapiClient::Item.new(
   created_at: 2024-01-01T00:00Z
 )
 ```
-

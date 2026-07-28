@@ -10,60 +10,65 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http';
+import { HttpFile } from "../http/http";
 
 export class Item {
-    /**
-    * The unique identifier of the item.
-    */
-    'id': string;
-    /**
-    * The name of the item.
-    */
-    'name': string;
-    /**
-    * An optional description of the item.
-    */
-    'description'?: string;
-    /**
-    * The timestamp when the item was created.
-    */
-    'createdAt'?: Date;
+  /**
+   * The unique identifier of the item.
+   */
+  "id": string;
+  /**
+   * The name of the item.
+   */
+  "name": string;
+  /**
+   * An optional description of the item.
+   */
+  "description"?: string;
+  /**
+   * The timestamp when the item was created.
+   */
+  "createdAt"?: Date;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly mapping: {[index: string]: string} | undefined = undefined;
+  static readonly mapping: { [index: string]: string } | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "createdAt",
-            "baseName": "createdAt",
-            "type": "Date",
-            "format": "date-time"
-        }    ];
+  static readonly attributeTypeMap: Array<{
+    name: string;
+    baseName: string;
+    type: string;
+    format: string;
+  }> = [
+    {
+      name: "id",
+      baseName: "id",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "name",
+      baseName: "name",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "description",
+      baseName: "description",
+      type: "string",
+      format: "",
+    },
+    {
+      name: "createdAt",
+      baseName: "createdAt",
+      type: "Date",
+      format: "date-time",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return Item.attributeTypeMap;
-    }
+  static getAttributeTypeMap() {
+    return Item.attributeTypeMap;
+  }
 
-    public constructor() {
-    }
+  public constructor() {}
 }
